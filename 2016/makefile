@@ -1,4 +1,4 @@
-DAY=day1
+DAY=day2
 include src/$(DAY)/makefile.title
 
 .PHONY: all clean open
@@ -22,5 +22,6 @@ debug: install
 	gdb bin/$(TITLE)
 
 open:
+	code makefile
 	code src/$(DAY)
 	code include/$(DAY)/*.hpp
