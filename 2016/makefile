@@ -1,4 +1,4 @@
-DAY=day3
+DAY=day4
 include src/$(DAY)/makefile.title
 
 .PHONY: all clean open
@@ -14,6 +14,7 @@ run: install
 
 clean:
 	cd src/$(DAY) && $(MAKE) clean
+	cd src/utils/ && rm -f *.o *.d
 
 distclean: clean
 	rm -rf bin/$(TITLE)
